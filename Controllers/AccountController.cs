@@ -23,5 +23,10 @@ namespace t_money.Controllers
             return View();
         }
 
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
     }
 }
