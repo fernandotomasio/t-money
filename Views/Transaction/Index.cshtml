@@ -11,9 +11,12 @@
                 ADD NEW
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <a class="dropdown-item" href="#">Expense</a>
-                <a class="dropdown-item" href="#">Income</a>
-                <a class="dropdown-item" href="#">Transfer</a>
+                <a asp-area="" asp-controller="Transaction" asp-action="Edit" 
+                    class="dropdown-item">Expense</a>
+                <a asp-area="" asp-controller="Transaction" asp-action="Edit" 
+                    class="dropdown-item">Income</a>
+                <a asp-area="" asp-controller="Transaction" asp-action="Edit" 
+                    class="dropdown-item">Transfer</a>
             </div>
 
         </div>
