@@ -56,21 +56,23 @@
                         <i class="simple-icon-grid"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right mt-3  position-absolute" id="iconMenuDropdown">
+                       
+                        <a asp-area="" asp-controller="Category" asp-action="Index"
+                            class="icon-menu-item">
+                            <i class="iconsminds-box-with-folders d-block"></i>
+                            <span>Categories</span>
+                        </a>
+
+                        <a asp-area="" asp-controller="Account" asp-action="Index"
+                            class="icon-menu-item">
+                            <i class="iconsminds-wallet d-block"></i>
+                            <span>Accounts</span>
+                        </a>
+
                         <a href="#" class="icon-menu-item">
                             <i class="iconsminds-equalizer d-block"></i>
                             <span>Settings</span>
                         </a>
-
-                        <a href="#" class="icon-menu-item">
-                            <i class="iconsminds-male-female d-block"></i>
-                            <span>Users</span>
-                        </a>
-
-                        <a href="#" class="icon-menu-item">
-                            <i class="iconsminds-puzzle d-block"></i>
-                            <span>Components</span>
-                        </a>
-
                         <a href="#" class="icon-menu-item">
                             <i class="iconsminds-bar-chart-4 d-block"></i>
                             <span>Profits</span>
@@ -200,18 +202,7 @@
                             <span>Budget</span>
                         </a>
                     </li>
-                    <li>
-                        <a  asp-area="" asp-controller="Category" asp-action="Index">
-                            <i class="iconsminds-box-with-folders"></i>
-                            <span>Categories</span>
-                        </a>
-                    </li>
-                    <li>
-                       <a  asp-area="" asp-controller="Account" asp-action="Index">
-                            <i class="iconsminds-wallet"></i>
-                            <span>Accounts</span>
-                        </a>
-                    </li>
+                   
                     
                 </ul>
             </div>
