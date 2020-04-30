@@ -2,6 +2,14 @@
     ViewData["Title"] = "Category";
 }
 
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="~/css/vendor/select2-bootstrap.min.css" />
+}
+
+
+
 <div class="row">
     <div class="col-12">
         <h1>@ViewData["Title"]</h1>
@@ -35,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Descrição</label>
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control">
                     </div>
 
                     <button type="submit" class="btn btn-primary mb-0">Submit</button>
@@ -46,3 +54,6 @@
     </div>
 </div>
 
+@section Scripts {
+    <script src="~/js/vendor/select2.full.js"></script>
+}
