@@ -2,6 +2,14 @@
     ViewData["Title"] = "Transaction";
 }
 
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/vendor/select2.min.css" />
+    <link rel="stylesheet" href="~/css/vendor/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/vendor/bootstrap-datepicker3.min.css" />
+
+}
+
 <div class="row">
     <div class="col-12">
         <h1>@ViewData["Title"]</h1>
@@ -26,16 +34,7 @@
                         <label for="exampleInputEmail1">Descriçao</label>
                         <input type="email" class="form-control">
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="exampleInputPassword1">Valor</label>
-                            <input type="text" class="form-control" >
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="exampleInputPassword1">Data</label>
-                            <input type="text" class="form-control" >
-                        </div>
-                    </div>
+
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword1">Conta</label>
@@ -60,9 +59,18 @@
                             </select>
                         </div>
                     </div>
-                      
 
- 
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1" >Valor</label>
+                            <input type="text"  class="form-control money" data-symbol="R$ " 
+                                   data-thousands="." data-decimal="," >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1">Data</label>
+                            <input type="text" class="form-control datepicker">
+                        </div>
+                    </div>
 
 
                     <button type="submit" class="btn btn-primary mb-0">Submit</button>
@@ -73,3 +81,11 @@
     </div>
 </div>
 
+@section Scripts {
+    <script src="~/js/vendor/select2.full.js"></script>
+    <script src="~/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="~/js/vendor/jquery.maskMoney.min.js"></script>
+    <script>
+        $(".money").maskMoney();
+    </script>
+}
