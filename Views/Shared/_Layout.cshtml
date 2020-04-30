@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="~/css/vendor/component-custom-switch.min.css" />
     <link rel="stylesheet" href="~/css/vendor/perfect-scrollbar.css" />
 
+    @RenderSection("Styles", required: false)
+
     <link rel="stylesheet" href="~/css/main.css" />
 </head>
 <body id="app-container" class="menu-default show-spinner">
@@ -48,28 +50,28 @@
 
         <div class="navbar-right">
             <div class="header-icons d-inline-block align-middle">
-               
+
 
                 <div class="position-relative d-none d-sm-inline-block">
                     <button class="header-icon btn btn-empty" type="button" id="iconMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                            aria-haspopup="true" aria-expanded="false">
                         <i class="simple-icon-grid"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right mt-3  position-absolute" id="iconMenuDropdown">
-                       
+
                         <a asp-area="" asp-controller="Category" asp-action="Index"
-                            class="icon-menu-item">
+                           class="icon-menu-item">
                             <i class="iconsminds-box-with-folders d-block"></i>
                             <span>Categories</span>
                         </a>
 
                         <a asp-area="" asp-controller="Account" asp-action="Index"
-                            class="icon-menu-item">
+                           class="icon-menu-item">
                             <i class="iconsminds-wallet d-block"></i>
                             <span>Accounts</span>
                         </a>
 
-                        <a  asp-area="" asp-controller="Settings" asp-action="Index" class="icon-menu-item">
+                        <a asp-area="" asp-controller="Settings" asp-action="Index" class="icon-menu-item">
                             <i class="iconsminds-equalizer d-block"></i>
                             <span>Settings</span>
                         </a>
@@ -92,7 +94,7 @@
 
                 <div class="position-relative d-inline-block">
                     <button class="header-icon btn btn-empty" type="button" id="notificationButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="simple-icon-bell"></i>
                         <span class="count">3</span>
                     </button>
@@ -101,7 +103,7 @@
                             <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                                 <a href="#">
                                     <img src="/img/profile-pic-l-2.jpg" alt="Notification Image"
-                                        class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                         class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                                 </a>
                                 <div class="pl-3">
                                     <a href="#">
@@ -113,7 +115,7 @@
                             <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                                 <a href="#">
                                     <img src="/img/notification-thumb.jpg" alt="Notification Image"
-                                        class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                         class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                                 </a>
                                 <div class="pl-3">
                                     <a href="#">
@@ -125,7 +127,7 @@
                             <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                                 <a href="#">
                                     <img src="/img/notification-thumb-2.jpg" alt="Notification Image"
-                                        class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                         class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                                 </a>
                                 <div class="pl-3">
                                     <a href="#">
@@ -137,11 +139,12 @@
                             <div class="d-flex flex-row mb-3 pb-3 ">
                                 <a href="#">
                                     <img src="/img/notification-thumb-3.jpg" alt="Notification Image"
-                                        class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
+                                         class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
                                 </a>
                                 <div class="pl-3">
                                     <a href="#">
-                                        <p class="font-weight-medium mb-1">3 items just added to wish list by a user!
+                                        <p class="font-weight-medium mb-1">
+                                            3 items just added to wish list by a user!
                                         </p>
                                         <p class="text-muted mb-0 text-small">09.04.2018 - 12:45</p>
                                     </a>
@@ -155,7 +158,7 @@
 
             <div class="user d-inline-block">
                 <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                        aria-expanded="false">
                     <span class="name">Sarah Kortney</span>
                     <span>
                         <img alt="Profile Picture" src="/img/profile-pic-l.jpg" />
@@ -174,31 +177,31 @@
             <div class="scroll">
                 <ul class="list-unstyled">
                     <li>
-                        <a  asp-area="" asp-controller="Home" asp-action="Index">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
                             <i class="iconsminds-dashboard"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a  asp-area="" asp-controller="Transaction" asp-action="Index">
+                        <a asp-area="" asp-controller="Transaction" asp-action="Index">
                             <i class="iconsminds-dollar-sign-2"></i>
                             <span>Transactions</span>
                         </a>
                     </li>
                     <li>
-                       <a  asp-area="" asp-controller="Report" asp-action="Index">
+                        <a asp-area="" asp-controller="Report" asp-action="Index">
                             <i class="iconsminds-statistic"></i>
                             <span>Reports</span>
                         </a>
                     </li>
                     <li>
-                        <a  asp-area="" asp-controller="Budget" asp-action="Index">
+                        <a asp-area="" asp-controller="Budget" asp-action="Index">
                             <i class="simple-icon-chart"></i>
                             <span>Budget</span>
                         </a>
                     </li>
-                   
-                    
+
+
                 </ul>
             </div>
         </div>
@@ -218,18 +221,18 @@
                         <p class="mb-0 text-muted">Fernando Tomasio - todos os direitos reservados - 2020</p>
                     </div>
                     <div class="col-sm-6 d-none d-sm-block">
-                        @* 
-                        <ul class="breadcrumb pt-0 pr-0 float-right">
-                            <li class="breadcrumb-item mb-0">
-                                <a class="btn-link" asp-area="" asp-controller="Home" asp-action="Privacy">Review</a>
-                            </li>
-                            <li class="breadcrumb-item mb-0">
-                                <a href="#" class="btn-link">Purchase</a>
-                            </li>
-                            <li class="breadcrumb-item mb-0">
-                                <a href="#" class="btn-link">Docs</a>
-                            </li>
-                        </ul> 
+                        @*
+                            <ul class="breadcrumb pt-0 pr-0 float-right">
+                                <li class="breadcrumb-item mb-0">
+                                    <a class="btn-link" asp-area="" asp-controller="Home" asp-action="Privacy">Review</a>
+                                </li>
+                                <li class="breadcrumb-item mb-0">
+                                    <a href="#" class="btn-link">Purchase</a>
+                                </li>
+                                <li class="breadcrumb-item mb-0">
+                                    <a href="#" class="btn-link">Docs</a>
+                                </li>
+                            </ul>
                         *@
                     </div>
                 </div>
@@ -242,8 +245,10 @@
     <script src="~/js/vendor/bootstrap.bundle.min.js"></script>
     <script src="~/js/vendor/perfect-scrollbar.min.js"></script>
     <script src="~/js/vendor/mousetrap.min.js"></script>
+    @RenderSection("Scripts", required: false)
+
     <script src="~/js/dore.script.js"></script>
     <script src="~/js/scripts.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+
 </body>
 </html>
