@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace t_money.Models
 {
-    public class Budget
+    public enum TransactionType
     {
-        public int Id { get; set; }
+        Income,
+        Expense
     }
 }
