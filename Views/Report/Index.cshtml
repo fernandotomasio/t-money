@@ -16,6 +16,245 @@
                 <li class="breadcrumb-item active" aria-current="page">Data</li>
             </ol>
         </nav>
+        <div class="mb-2">
+
+            <div class="collapse dont-collapse-sm" id="displayOptions">
+
+                <div class="d-block d-md-inline-block">
+                    <div class="btn-group float-md-left mr-1 mb-1">
+                        <button class="btn btn-outline-dark btn-xs dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tipo
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </div>
+                    <div class="btn-group float-md-left mr-1 mb-1">
+                        <button class="btn btn-outline-dark btn-xs dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contas
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </div>
+                    <div class="btn-group float-md-left mr-1 mb-1">
+                        <button class="btn btn-outline-dark btn-xs dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categorias
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                    </div>
+                    <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                        <input placeholder="Buscar...">
+                    </div>
+
+                </div>
+                <div class="float-md-right">
+                    <button class="btn btn-outline-dark btn-xs dropdown-toggle" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        April 2020
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">May 2020</a>
+                        <a class="dropdown-item" href="#">June 2020</a>
+                        <a class="dropdown-item" href="#">July 2020</a>
+                        <a class="dropdown-item" href="#">August 2020</a>
+                        <a class="dropdown-item" href="#">September 2020</a>
+                        <a class="dropdown-item" href="#">October 2020</a>
+                        <a class="dropdown-item" href="#">November 2020</a>
+                        <a class="dropdown-item" href="#">December 2020</a>
+                        <a class="dropdown-item" href="#">January 2021</a>
+                        <a class="dropdown-item" href="#">February 2021</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
         <div class="separator mb-5"></div>
     </div>
 </div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Line Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="salesChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Bar Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="productChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="productChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Area Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="areaChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="areaChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Scatter Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="scatterChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="scatterChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Radar Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="radarChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Polar Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="polarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="polarChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Doughnut Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="categoryChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="mb-4">Pie Chart</h5>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <h6 class="mb-4">No Shadow</h6>
+                        <div class="chart-container chart">
+                            <canvas id="pieChartNoShadow"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="~/js/vendor/Chart.bundle.min.js"></script>
+    <script src="~/js/vendor/chartjs-plugin-datalabels.js"></script>
+}

@@ -3,14 +3,54 @@
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/vendor/select2.min.css" />
-    <link rel="stylesheet" href="~/css/vendor/select2-bootstrap.min.css" />
+
+    <style>
+        .slidecontainer {
+            width: 100%; /* Width of the outside container */
+        }
+
+        /* The slider itself */
+        .slider {
+            -webkit-appearance: none; /* Override default CSS styles */
+            appearance: none;
+            width: 100%; /* Full-width */
+            height: 25px; /* Specified height */
+            background: #d3d3d3; /* Grey background */
+            outline: none; /* Remove outline */
+            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+        }
+
+            /* Mouse-over effects */
+            .slider:hover {
+                opacity: 1; /* Fully shown on mouse-over */
+            }
+
+            /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none; /* Override default look */
+                appearance: none;
+                width: 25px; /* Set a specific slider handle width */
+                height: 25px; /* Slider handle height */
+                background: #4CAF50; /* Green background */
+                cursor: pointer; /* Cursor on hover */
+            }
+
+            .slider::-moz-range-thumb {
+                width: 25px; /* Set a specific slider handle width */
+                height: 25px; /* Slider handle height */
+                background: #4CAF50; /* Green background */
+                cursor: pointer; /* Cursor on hover */
+            }
+    </style>
 
 }
 
 <div class="row">
     <div class="col-12">
         <h1>@ViewData["Title"]</h1>
+
         <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
             <ol class="breadcrumb pt-0">
                 <li class="breadcrumb-item">
@@ -24,39 +64,80 @@
         </nav>
         <div class="separator mb-5"></div>
     </div>
-    <div class="col-12">
-        <div class="card mb-4">
+</div>
+
+<div class="row">
+    <div class="col-12 col-xl-6 mb-4">
+        <div class="card h-100">
             <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Categoria</label>
-                        <select class="form-control select2-single" data-width="100%">
-                            <option label="&nbsp;">&nbsp;</option>
+                <h5 class="mb-4">Expenses</h5>
 
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Hawaii</option>
-                            </optgroup>
-                        </select>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Valor</label>
-                        <input type="text" class="form-control money">
+                </div>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider2"></div>
                     </div>
-
-
-                    <button type="submit" class="btn btn-primary mb-0">Submit</button>
-                </form>
-
+                </div>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider3"></div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-xl-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="mb-4">Incomes</h5>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider5"></div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider6"></div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider7"></div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label>Single Slider</label>
+                    <div>
+                        <div class="slider" id="singleSlider"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 @section Scripts {
-    <script src="~/js/vendor/select2.full.js"></script>
-    <script src="~/js/vendor/jquery.maskMoney.min.js"></script>
     <script>
-        $(".money").maskMoney();
+        var slider = document.getElementById("myRange");
+       // var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+       //
     </script>
 }
