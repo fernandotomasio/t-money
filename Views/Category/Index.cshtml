@@ -1,6 +1,9 @@
-﻿@{
+﻿@model IList<Category>
+
+@{
     ViewData["Title"] = "Categories";
 }
+
 
 <div class="row">
     <div class="col-12">
@@ -97,203 +100,32 @@
 
 <div class="row">
     <div class="col-12 list" data-check-all="checkAll">
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <i class="simple-icon-refresh heading-icon"></i>
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Marble Cake
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">R$ 2.500,00</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PAGO</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
 
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <i class="simple-icon-trash heading-icon"></i>
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Fruitcake
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cupcakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">01.04.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PROCESSED</span>
+        @{
+            foreach (var item in Model)
+            {
+                <div class="card d-flex flex-row mb-3">
+                    <div class="d-flex flex-grow-1 min-width-zero">
+                        <div class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                            <i class="simple-icon-refresh heading-icon"></i>
+                            <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
+                                @item.Description
+                            </a>
+                            <p class="mb-0 text-muted text-small w-15 w-xs-100">Cakes</p>
+                            <p class="mb-0 text-muted text-small w-15 w-xs-100">R$ 2.500,00</p>
+                            <div class="w-15 w-xs-100">
+                                <span class="badge badge-pill badge-primary">PAGO</span>
+                            </div>
+                        </div>
+                        <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-label">&nbsp;</span>
+                        </label>
                     </div>
                 </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Chocolate Cake
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">25.03.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PROCESSED</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
+            }
+        }
 
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Fat Rascal
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cupcakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">20.03.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PROCESSED</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Financier
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">15.03.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-secondary">ON HOLD</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Genoise
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cupcakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">11.03.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PROCESSED</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Gingerbread
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">10.03.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-secondary">ON HOLD</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Goose Breast
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cupcakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">27.02.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-secondary">ON HOLD</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Magdalena
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">22.02.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PROCESSED</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="card d-flex flex-row mb-3">
-            <div class="d-flex flex-grow-1 min-width-zero">
-                <div
-                    class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                    <a class="list-item-heading mb-0 truncate w-40 w-xs-100" href="Pages.Product.Detail.html">
-                        Cheesecake
-                    </a>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">Cupcakes</p>
-                    <p class="mb-0 text-muted text-small w-15 w-xs-100">18.02.2018</p>
-                    <div class="w-15 w-xs-100">
-                        <span class="badge badge-pill badge-primary">PROCESSED</span>
-                    </div>
-                </div>
-                <label class="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-label">&nbsp;</span>
-                </label>
-            </div>
-        </div>
 
     </div>
 </div>

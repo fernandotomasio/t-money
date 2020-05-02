@@ -41,12 +41,6 @@ namespace t_money.Data
 
             modelBuilder.Entity<User>().HasKey(t => t.Id);
         }
-        public DbSet<Account> Account { get; set; }
-        public DbSet<BudgetItem> BudgetItem { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Setting> Setting { get; set; }
-        public DbSet<Transaction> Transaction { get; set; }
-        public DbSet<User> Users { get; set; }
 
     }
     
