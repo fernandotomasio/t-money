@@ -80,7 +80,7 @@ namespace t_money.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("t_money.Models.Setting", b =>
@@ -144,7 +144,7 @@ namespace t_money.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("t_money.Models.Account", b =>
