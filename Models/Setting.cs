@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace t_money.Models
 {
-    public class Setting
+    public class Setting: BaseModel
     {
-        public int Id { get; set; }
         public User User { get; set; }
 
     }
