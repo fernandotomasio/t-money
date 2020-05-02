@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using t_money.Data;
+using t_money.Repositories;
 
 namespace t_money
 {
@@ -29,6 +30,13 @@ namespace t_money
             services.AddDbContext<ApplicationContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("Default"))
             );
+
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IBudgetItemRepository, BudgetItemRepository>();
+            services.AddTransient<ISettingRepository, SettingRepository>();
+            services.AddTransient<ITransactionRepository, TransactionRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
