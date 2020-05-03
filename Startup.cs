@@ -27,6 +27,8 @@ namespace TMoney
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
+
             services.AddDbContext<ApplicationContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("Default"))
             );
@@ -55,8 +57,11 @@ namespace TMoney
             app.UseHttpsRedirection();
             
             app.UseStaticFiles();
+                  
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -65,6 +70,7 @@ namespace TMoney
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                    endpoints.MapRazorPages();
             });
         }
     }

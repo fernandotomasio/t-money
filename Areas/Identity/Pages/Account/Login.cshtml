@@ -5,51 +5,21 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Input.Email"></label>
-                    <input asp-for="Input.Email" class="form-control" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Input.Password"></label>
-                    <input asp-for="Input.Password" class="form-control" />
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label asp-for="Input.RememberMe">
-                            <input asp-for="Input.RememberMe" />
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Log in</button>
-                </div>
-                <div class="form-group">
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
-                </div>
-            </form>
-        </section>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
+<div class="col-12 col-md-10 mx-auto my-auto">
+    <div class="card auth-card">
+        <div class="position-relative image-side ">
+
+            <p class=" text-white h2">MAGIC IS IN THE DETAILS</p>
+
+            <p class="white mb-0">
+                Please use your credentials to login.
+                <br>If you are not a member, please
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="white">register</a>.
+            </p>
+            <p>
+                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+            </p>
+
             <h4>Use another service to log in.</h4>
             <hr />
             @{
@@ -76,7 +46,39 @@
                     </form>
                 }
             }
-        </section>
+        </div>
+        <div class="form-side">
+            <a href="Dashboard.Default.html">
+                <span class="logo-single"></span>
+            </a>
+            <h6 class="mb-4">Login</h6>
+            <form id="account" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <label asp-for="Input.Email" class="form-group has-float-label mb-4">
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span>Email</span>
+                </label>
+
+                <label asp-for="Input.Password" class="form-group has-float-label mb-4">
+                    <input asp-for="Input.Password" class="form-control" type="password" placeholder="" />
+                    <span>Password</span>
+                </label>
+
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe">
+                            <input asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <a id="forgot-password" asp-page="./ForgotPassword">Forget password?</a>
+                    <button class="btn btn-primary btn-lg btn-shadow" type="submit">LOGIN</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
