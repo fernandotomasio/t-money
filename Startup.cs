@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using t_money.Data;
-using t_money.Repositories;
+using TMoney.Data;
+using TMoney.Repositories;
 
-namespace t_money
+namespace TMoney
 {
     public class Startup
     {
@@ -27,6 +27,8 @@ namespace t_money
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
+
             services.AddDbContext<ApplicationContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("Default"))
             );
@@ -55,8 +57,11 @@ namespace t_money
             app.UseHttpsRedirection();
             
             app.UseStaticFiles();
+                  
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -65,6 +70,7 @@ namespace t_money
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                    endpoints.MapRazorPages();
             });
         }
     }

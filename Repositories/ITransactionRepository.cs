@@ -1,7 +1,7 @@
 ﻿using System.Collections;
-using t_money.Models;
+using TMoney.Models;
 
-namespace t_money.Repositories
+namespace TMoney.Repositories
 {
     public interface ITransactionRepository: IBaseRepository<Transaction>
     {

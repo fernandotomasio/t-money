@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using t_money.Models;
+using TMoney.Models;
 
-namespace t_money.Repositories
+namespace TMoney.Repositories
 {
     public interface IBaseRepository<T> where T: BaseModel
     {
