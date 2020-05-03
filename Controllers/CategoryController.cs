@@ -5,10 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using t_money.Models;
-using t_money.Repositories;
+using TMoney.Models;
+using TMoney.Repositories;
 
-namespace t_money.Controllers
+namespace TMoney.Controllers
 {
     public class CategoryController : Controller
     {

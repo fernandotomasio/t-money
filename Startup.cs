@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using t_money.Data;
-using t_money.Repositories;
+using TMoney.Data;
+using TMoney.Repositories;
 
-namespace t_money
+namespace TMoney
 {
     public class Startup
     {

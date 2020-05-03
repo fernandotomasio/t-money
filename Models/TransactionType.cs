@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace t_money.Models
+namespace TMoney.Models
 {
     public enum TransactionType
     {

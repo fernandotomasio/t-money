@@ -4,10 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using t_money.Data;
-using t_money.Models;
+using TMoney.Data;
+using TMoney.Models;
 
-namespace t_money.Repositories
+namespace TMoney.Repositories
 {
     public class AccountRepository : BaseRepository<Account>, IAccountRepository
     {

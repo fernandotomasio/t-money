@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using t_money.Models;
+using TMoney.Models;
 
-namespace t_money.Data
+namespace TMoney.Data
 {
     public class ApplicationContext : DbContext
     {

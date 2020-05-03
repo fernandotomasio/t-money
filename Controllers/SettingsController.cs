@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using t_money.Models;
+using TMoney.Models;
 
-namespace t_money.Controllers
+namespace TMoney.Controllers
 {
     public class SettingsController : Controller
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace t_money.Models
+namespace TMoney.Models
 {
     public class ErrorViewModel
     {

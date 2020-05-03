@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using t_money.Data;
+using TMoney.Data;
 
-namespace t_money.Migrations
+namespace TMoney.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
     [Migration("20200502130350_Initial")]
