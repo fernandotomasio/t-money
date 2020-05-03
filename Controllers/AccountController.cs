@@ -28,5 +28,16 @@ namespace t_money.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Account category)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return RedirectToAction("Edit");
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }
