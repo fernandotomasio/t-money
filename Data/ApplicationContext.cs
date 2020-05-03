@@ -18,6 +18,9 @@ namespace t_money.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Account>().HasKey(t => t.Id);
             modelBuilder.Entity<Account>().HasOne(t => t.User);
+            modelBuilder.Entity<Account>()
+              .Property(e => e.AccountType)
+              .HasConversion(v => v.ToString(), v => (AccountType)Enum.Parse(typeof(AccountType), v));
 
             modelBuilder.Entity<BudgetItem>().HasKey(t => t.Id);
             modelBuilder.Entity<BudgetItem>().HasOne(t => t.Category);
