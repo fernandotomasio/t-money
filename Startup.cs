@@ -39,6 +39,13 @@ namespace TMoney
             services.AddTransient<ISettingRepository, SettingRepository>();
             services.AddTransient<ITransactionRepository, TransactionRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
+
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = Configuration["ExternalLogin:Google:ClientId"]; 
+                    options.ClientSecret = Configuration["ExternalLogin:Google:ClientSecret"]; 
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
